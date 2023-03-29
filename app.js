@@ -13,17 +13,16 @@ const hostname = "127.0.0.1";
 
 // Require the connection to our database
 const mongoDBconnect = require("./schemas");
-
+ 
 // Call the connect function to establish a connection to our database
 mongoDBconnect();
 
 // Configure middleware to parse JSON
 app.use(express.json());
 
-// Configure our app to use the routes defined in ./routes
+
 app.use("/api", routes);
 
-// Define a new route
 app.get("/", (req, res) => {
   // Send a simple "Hello World!" message
   res.send("Hello World!");

@@ -1,20 +1,5 @@
 const Goods = require("../schemas/goods");
 
-// {
-//   "goodsId": 1,
-//   "name": "시원한 콜라",
-//   "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk7JqMw7ZYZP4ZW136wcoMTmLzbrMIJzUWb1Dhu9cHwCPp0gA&usqp=CAc",
-//   "category": "drink",
-//   "price": 2500
-// }
-
-// {
-//   "goodsId": 2,
-//   "name": "시원한 사이다",
-//   "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk7JqMw7ZYZP4ZW136wcoMTmLzbrMIJzUWb1Dhu9cHwCPp0gA&usqp=CAc",
-//   "category": "drink",
-//   "price": 3000
-// }
 
 class GoodssController {
   //상품조회
