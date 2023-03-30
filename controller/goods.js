@@ -1,18 +1,29 @@
-const Goods = require("../schemas/goods");
+const Goods = require("../models/goods");
 
 
 class GoodssController {
-  //상품조회
-  getGoods = async (req, res, next) => {
-    const { goodsId } = req.body;
-
-    const goods = await Goods.find({ goodsId });
+  //상품전체조회
+  getAllGoods = async (req, res, next) => {
+    const goods = await Goods.find({});
     if (!goods.length) {
       return res
         .status(400)
         .json({ success: false, errorMessage: "없는 데이터입니다." });
     }
 
+    res.status(201).json({ goods: goods });
+  };
+
+  //상품상세조회
+  getGoods = async (req, res, next) => {
+    const { id } = req.params;
+    console.log("id", id);
+    const goods = await Goods.find({ goodsId: id });
+    if (!goods.length) {
+      return res
+        .status(400)
+        .json({ success: false, errorMessage: "없는 데이터입니다." });
+    }
     res.status(201).json({ goods: goods });
   };
 

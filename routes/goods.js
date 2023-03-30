@@ -4,12 +4,11 @@ const GoodsController = new Goods();
 
 const router = express.Router();
 
-router
-  .route("/")
-  .get(GoodsController.getGoods)
-  .put(GoodsController.putGoods)
-  .post(GoodsController.postGoods)
-  .delete(GoodsController.deleteGoods);
+router.get(GoodsController.getAllGoods)
+router.get("/:id",GoodsController.getGoods)
+router.put(GoodsController.putGoods)
+router.post(GoodsController.postGoods)
+router.delete(GoodsController.deleteGoods);
 
 
 

@@ -16,5 +16,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WHS95/node.js_prc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WHS95/node.js_prc/issues"
+  },
+  "homepage": "https://github.com/WHS95/node.js_prc#readme"
 }
